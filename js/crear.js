@@ -1,9 +1,8 @@
-// crear.js
-
 document.getElementById("crearPerfilForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    
+
     const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const fechaNacimiento = document.getElementById("fechaNacimiento").value;
@@ -18,6 +17,7 @@ document.getElementById("crearPerfilForm").addEventListener("submit", function(e
         const nuevoPerfil = {
             id: Date.now(),
             nombre,
+            apellido,
             email,
             password,
             fechaNacimiento,

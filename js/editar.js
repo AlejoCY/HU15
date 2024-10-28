@@ -11,6 +11,7 @@ if (perfil) {
     // Cargar datos del perfil en el formulario
     document.getElementById("id").value = perfil.id;
     document.getElementById("nombre").value = perfil.nombre;
+    document.getElementById("apellido").value = perfil.apellido; // Campo apellido
     document.getElementById("email").value = perfil.email;
     document.getElementById("password").value = perfil.password;
     document.getElementById("fechaNacimiento").value = perfil.fechaNacimiento;
@@ -23,8 +24,9 @@ if (perfil) {
 document.getElementById("editarPerfilForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Obtener valores actualizados del formulario
+    // Actualizar valores del perfil desde el formulario
     perfil.nombre = document.getElementById("nombre").value;
+    perfil.apellido = document.getElementById("apellido").value; // Guardar apellido
     perfil.email = document.getElementById("email").value;
     perfil.password = document.getElementById("password").value;
     perfil.fechaNacimiento = document.getElementById("fechaNacimiento").value;

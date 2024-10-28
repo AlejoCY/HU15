@@ -9,7 +9,7 @@ function cargarPerfiles() {
         let row = perfilTableBody.insertRow();
         row.innerHTML = `
             <td><img src="${perfil.fotoPerfil}" alt="Foto de perfil" class="img-thumbnail" width="50"></td>
-            <td>${perfil.nombre}</td>
+            <td>${perfil.nombre} ${perfil.apellido}</td> <!-- Nombre y apellido juntos -->
             <td>${perfil.email}</td>
             <td>${perfil.sexo}</td>
         `;

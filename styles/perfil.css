@@ -19,9 +19,17 @@ body {
 /* Títulos */
 h2 {
     font-size: 1.8em;
-    color: #007bff;
+    color: #dc3545; /* Cambiado a rojo para indicar acción de eliminación */
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+
+/* Mensaje descriptivo */
+.container p {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Formularios */
@@ -40,6 +48,7 @@ h2 {
     padding: 10px;
 }
 
+/* Botones */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -47,59 +56,14 @@ button[type="submit"] {
     font-weight: bold;
     border-radius: 5px;
     border: none;
-    background-color: #007bff;
-    color: #fff;
     transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Botones de acción */
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.btn-danger {
+button.btn-danger {
     background-color: #dc3545;
     color: #fff;
 }
 
-.btn-warning {
-    background-color: #ffc107;
-    color: #212529;
-}
-
-/* Tabla */
-.table {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.table th {
-    background-color: #007bff;
-    color: #fff;
-    text-align: left;
-    padding: 10px;
-}
-
-.table td {
-    padding: 10px;
-    border-top: 1px solid #ddd;
-}
-
-/* Foto de perfil en miniatura */
-.img-thumbnail {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-top: 10px;
-}
-
-/* Área de texto para biografía */
-textarea {
-    resize: vertical;
+button.btn-danger:hover {
+    background-color: #c82333;
 }
