@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Perfil</title>
+    <link rel="stylesheet" href="styles/perfil.css">
+</head>
+<body>
+    <div class="profile-container delete-container">
+        <h2>¿Estás seguro de que deseas eliminar tu perfil?</h2>
+        <p>Esta acción no se puede deshacer y todos tus datos se perderán permanentemente.</p>
+        <div class="button-group">
+            <button class="delete-button" onclick="confirmDelete()">Eliminar Perfil</button>
+            <button class="cancel-button" onclick="cancelDelete()">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmDelete() {
+            // Aquí puedes integrar el código de eliminación con el backend o una redirección
+            alert("Perfil eliminado con éxito."); // Mensaje de confirmación
+            // Redirecciona o llama a la API de eliminación
+        }
+
+        function cancelDelete() {
+            window.history.back(); // Regresa a la página anterior
+        }
+    </script>
+</body>
+</html>
