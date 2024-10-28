@@ -7,7 +7,12 @@ function cargarPerfiles() {
     perfilTableBody.innerHTML = "";
     perfiles.forEach(perfil => {
         let row = perfilTableBody.insertRow();
-        row.innerHTML = `<td>${perfil.id}</td><td>${perfil.nombre}</td><td>${perfil.email}</td>`;
+        row.innerHTML = `
+            <td><img src="${perfil.fotoPerfil}" alt="Foto de perfil" class="img-thumbnail" width="50"></td>
+            <td>${perfil.nombre}</td>
+            <td>${perfil.email}</td>
+            <td>${perfil.sexo}</td>
+        `;
     });
 }
 
