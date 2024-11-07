@@ -8,16 +8,25 @@ const perfiles = JSON.parse(localStorage.getItem("perfiles")) || [];
 const perfil = perfiles.find(p => p.id === perfilId);
 
 if (perfil) {
-    // Cargar datos del perfil en el formulario
+    // Cargar datos en el formulario de edición
     document.getElementById("id").value = perfil.id;
     document.getElementById("nombre").value = perfil.nombre;
-    document.getElementById("apellido").value = perfil.apellido; // Campo apellido
+    document.getElementById("apellido").value = perfil.apellido;
     document.getElementById("email").value = perfil.email;
     document.getElementById("password").value = perfil.password;
     document.getElementById("fechaNacimiento").value = perfil.fechaNacimiento;
     document.getElementById("sexo").value = perfil.sexo;
     document.getElementById("bio").value = perfil.bio;
     document.getElementById("fotoActual").src = perfil.fotoPerfil;
+
+    // Cargar datos en la vista previa
+    document.getElementById("vistaPreviaFoto").src = perfil.fotoPerfil;
+    document.getElementById("vistaPreviaNombre").innerText = perfil.nombre;
+    document.getElementById("vistaPreviaApellido").innerText = perfil.apellido;
+    document.getElementById("vistaPreviaEmail").innerText = perfil.email;
+    document.getElementById("vistaPreviaFecha").innerText = perfil.fechaNacimiento;
+    document.getElementById("vistaPreviaSexo").innerText = perfil.sexo;
+    document.getElementById("vistaPreviaBio").innerText = perfil.bio;
 }
 
 // Guardar cambios al perfil
@@ -26,7 +35,7 @@ document.getElementById("editarPerfilForm").addEventListener("submit", function(
 
     // Actualizar valores del perfil desde el formulario
     perfil.nombre = document.getElementById("nombre").value;
-    perfil.apellido = document.getElementById("apellido").value; // Guardar apellido
+    perfil.apellido = document.getElementById("apellido").value;
     perfil.email = document.getElementById("email").value;
     perfil.password = document.getElementById("password").value;
     perfil.fechaNacimiento = document.getElementById("fechaNacimiento").value;
